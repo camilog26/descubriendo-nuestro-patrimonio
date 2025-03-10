@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Descubriendo Nuestro Patrimonio</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- Agregar Firebase SDK -->
+    <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-firestore.js"></script>
+</head>
+<body>
+    <header>
+        <h1>Descubriendo Nuestro Patrimonio</h1>
+        <p>Explora el centro histórico de Buga y aprende sobre su historia</p>
+    </header>
+    <main>
+        <div id="map">
+            <h2>Mapa Interactivo</h2>
+            <div class="map-point" data-point="universidad">Universidad del Valle</div>
+            <div class="map-point" data-point="teatro">Teatro Municipal</div>
+            <div class="map-point" data-point="cultura">Casa de la Cultura</div>
+            <div class="map-point" data-point="academia">Academia de Historia</div>
+            <div class="map-point" data-point="plazoleta">Plazoleta de la Revolución</div>
+            <div class="map-point" data-point="puente">Puente de la Libertad</div>
+        </div>
+        <div id="info">
+            <h2>Información del Punto de Interés</h2>
+            <div id="info-content"></div>
+        </div>
+        <div id="ranking">
+            <h2>Ranking de Equipos</h2>
+            <div id="ranking-content"></div>
+        </div>
+    </main>
+    <script src="script.js"></script>
+    <script>
+        // Configuración de Firebase
+        const firebaseConfig = {
+            apiKey: "YOUR_API_KEY",
+            authDomain: "YOUR_AUTH_DOMAIN",
+            projectId: "YOUR_PROJECT_ID",
+            storageBucket: "YOUR_STORAGE_BUCKET",
+            messagingSenderId: "YOUR_MESSAGING_SENDER_ID",
+            appId: "YOUR_APP_ID"
+        };
+
+        // Inicializar Firebase
+        firebase.initializeApp(firebaseConfig);
+    </script>
+</body>
+</html>
